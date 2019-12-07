@@ -2,7 +2,7 @@
   <b-navbar class="is-dt-dark">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{name: 'home'}">
-          <h3 class="title is-3 has-text-dt-light font-">Documentive</h3> 
+          <h3 class="title is-3 has-text-dt-light">Documentive</h3> 
       </b-navbar-item>
     </template>
     <template slot="end">
