@@ -9,7 +9,10 @@ import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
 import './assets/theme.scss'
 
-Vue.use(Buefy)
+Vue.use(Buefy, {
+  defaultIconPack: 'fas',
+})
+
 Vue.config.productionTip = false
 
 firebase.initializeApp({
