@@ -47,7 +47,7 @@
                 size="is-large"
                 ></b-icon>
             </div>
-            <h4 class="subtitle is-4 has-text-centered">Crea una base de conocimientos para realizar tus tratos</h4>
+            <h4 class="subtitle is-4 has-text-centered">Crea una base de conocimientos para tu equipo</h4>
           </div>
           <div class="column is-one-fifth">
             <div class="block has-text-centered">
