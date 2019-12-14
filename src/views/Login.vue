@@ -1,8 +1,8 @@
 <template>
     <base-container>
         <base-form-card>
-            <h2 class="subtitle is-2">Iniciar Sesión</h2>
-            <the-login-button></the-login-button>
+            <h2 class="subtitle is-2 has-text-centered">Iniciar Sesión</h2>
+            <the-login-button class="btn-center"></the-login-button>
         </base-form-card>
     </base-container>
 </template>
@@ -17,3 +17,10 @@ export default {
     components: { TheLoginButton, BaseFormCard, BaseContainer }
 }
 </script>
+
+<style scoped>
+    .btn-center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
