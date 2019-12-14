@@ -8,12 +8,12 @@
     <template slot="end">
       <b-navbar-item tag="div">
         <div class="buttons">
-          <router-link class="button is-dt-primary" to="/">
+          <router-link class="button is-dt-primary" :to="{name: 'home'}">
             <strong>Registrarme</strong>
           </router-link> 
         </div>
       </b-navbar-item>
-      <b-navbar-item tag="router-link" class="has-text-white" to="/">
+      <b-navbar-item tag="router-link" class="has-text-white" :to="{name: 'login'}">
         Iniciar Sesión
       </b-navbar-item>
     </template>
