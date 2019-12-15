@@ -1,11 +1,34 @@
 <template>
-    <div class="google-btn">
+    <div class="google-btn" @click="handleLogin">
         <div class="google-icon-wrapper">
             <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
         </div>
         <p class="btn-text"><b>Iniciar Sesión con Google</b></p>
     </div>
 </template>
+
+<script>
+import firebase from "firebase";
+
+export default {
+  name: 'TheLoginButton',
+  methods: {
+    handleLogin() {
+      var authProvider = new firebase.auth.GoogleAuthProvider()
+
+      firebase.auth().signInWithPopup(authProvider).catch(error => {
+        this.$buefy.notification.open({
+            duration: 5000,
+            message: error.message,
+            position: 'is-bottom-right',
+            type: 'is-danger',
+            hasIcon: true
+        })
+      })
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 $white: #fff;
