@@ -7,10 +7,17 @@
 </template>
 
 <script>
+  import firebase from "firebase"
   import TheNavbar from "@/components/TheNavbar.vue"
   import TheFooter from "@/components/TheFooter.vue"
+  import { UPDATE_USER_STATE } from "@/store/constants"
 
   export default {
-    components: {TheNavbar, TheFooter}
+    components: {TheNavbar, TheFooter},
+    mounted() {
+      firebase.auth().onAuthStateChanged(user => {
+        this.$store.dispatch(UPDATE_USER_STATE, user);
+      })
+    }
   }
 </script>
