@@ -13,11 +13,12 @@ export default new Vuex.Store({
   mutations: {
     [UPDATE_USER_STATE]: (state, payload) => {
       state.user = payload;
+      state.logedIn = !state.logedIn;
     }
   },
   actions: {
     [UPDATE_USER_STATE]: ({ commit }) => {
-      commit(UPDATE_USER_STATE)
+      commit(UPDATE_USER_STATE);
     }
   },
   modules: {
