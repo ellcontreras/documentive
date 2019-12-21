@@ -1,13 +1,13 @@
 import Vue from 'vue'
-import App from './App.vue'
+import Index from './Index.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
-import firebase from "firebase"
 import Buefy from 'buefy'
 
 import 'buefy/dist/buefy.css'
 import './assets/theme.scss'
+import FirebaseAuthPlugin from './FirebaseAuthPlugin'
 
 Vue.use(Buefy, {
   defaultIconPack: 'fas',
@@ -15,21 +15,10 @@ Vue.use(Buefy, {
 
 Vue.config.productionTip = false
 
-firebase.initializeApp({
-  apiKey: "AIzaSyCnXJigrILkSbRHWmMRaVpVgekY76ep6e4",
-  authDomain: "documentive-da37d.firebaseapp.com",
-  databaseURL: "https://documentive-da37d.firebaseio.com",
-  projectId: "documentive-da37d",
-  storageBucket: "documentive-da37d.appspot.com",
-  messagingSenderId: "712719294772",
-  appId: "1:712719294772:web:05fbe9ced78af581018561",
-  measurementId: "G-SJNTCRTNP7"
-})
-
-firebase.analytics()
+Vue.use(FirebaseAuthPlugin)
 
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(Index)
 }).$mount('#app')
