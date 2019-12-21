@@ -7,15 +7,31 @@
     </template>
     <template slot="end">
       <b-navbar-item tag="div">
-        <div class="buttons">
-          <router-link class="button is-dt-primary" :to="{name: 'home'}">
+        <div class="buttons" v-show="!user">
+          <router-link class="button is-dt-primary" :to="{name: 'login', params: {type: 'Registro'}}">
             <strong>Registrarme</strong>
           </router-link> 
         </div>
       </b-navbar-item>
-      <b-navbar-item tag="router-link" class="has-text-white" :to="{name: 'login'}">
+      <b-navbar-item v-show="!user" tag="router-link" class="has-text-white" :to="{name: 'login'}">
         Iniciar Sesión
+      </b-navbar-item>
+      <b-navbar-item v-show="user" tag="router-link" class="has-text-white" :to="{name: 'home'}">
+        Home
+      </b-navbar-item>
+      <b-navbar-item v-show="user" tag="router-link" class="has-text-white" :to="{name: 'logout'}">
+        Logout
       </b-navbar-item>
     </template>
   </b-navbar>
 </template>
+
+<script>
+import { mapState } from "vuex";
+
+export default {
+  computed: {
+    ...mapState(['user'])
+  }
+}
+</script>
