@@ -1,21 +1,64 @@
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 
+body {
+  background-color: #f8f8fb;
+}
+
 $colors: (
-  "white": ($white, $black),
-  "black": ($black, $white),
-  "light": ($light, $light-invert),
-  "dark": ($dark, $dark-invert),
-  "primary": ($primary, $primary-invert),
-  "info": ($info, $info-invert),
-  "success": ($success, $success-invert),
-  "warning": ($warning, $warning-invert),
-  "danger": ($danger, $danger-invert),
-  "dt-dark": (#23374d, #eeeeee),
-  "dt-primary": (#1089ff, #eeeeee),
-  "dt-gray": (#e5e5e5, #eeeeee),
-  "dt-light": (#eeeeee, #bbbbbb)
-  );
+  "white": (
+    $white,
+    $black
+  ),
+  "black": (
+    $black,
+    $white
+  ),
+  "light": (
+    $light,
+    $light-invert
+  ),
+  "dark": (
+    $dark,
+    $dark-invert
+  ),
+  "primary": (
+    $primary,
+    $primary-invert
+  ),
+  "info": (
+    $info,
+    $info-invert
+  ),
+  "success": (
+    $success,
+    $success-invert
+  ),
+  "warning": (
+    $warning,
+    $warning-invert
+  ),
+  "danger": (
+    $danger,
+    $danger-invert
+  ),
+  "dt-dark": (
+    #6e00ff,
+    #eeeeee
+  ),
+  "dt-primary": (
+    #1089ff,
+    #eeeeee
+  ),
+  "dt-gray": (
+    #e5e5e5,
+    #eeeeee
+  ),
+  "dt-light": (
+    #eeeeee,
+    #bbbbbb
+  )
+);
 
 // Import Bulma and Buefy styles
 @import "~bulma";
